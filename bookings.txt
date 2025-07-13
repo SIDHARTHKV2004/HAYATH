@@ -1,0 +1,31 @@
+
+    New Booking:
+    From: Thrissur
+    To: Kochi
+    Date: 2025-05-15
+    Time: 00:24
+    Vehicle: train
+    Seating: first
+    Fare: ₹600
+    -------------------------
+    
+    New Booking:
+    From: Kochi
+    To: Kochi
+    Date: 2025-05-12
+    Time: 10:58
+    Vehicle: bus
+    Seating: economy
+    Fare: ₹500
+    -------------------------
+    
+    New Booking:
+    From: Thrissur
+    To: Kochi
+    Date: 2025-05-20
+    Time: 11:09
+    Vehicle: train
+    Seating: business
+    Fare: ₹600
+    -------------------------
+    

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Punnathur Kotta | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="Punnathur Kotta.jpg" alt="Punnathur Kotta">
+    <div class="hero-text">
+      <h2>Punnathur Kotta</h2>
+      <p>Guruvayur, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Punnathur Kotta, also known as the Elephant Fort, is a sanctuary for the elephants that belong to the Guruvayur Temple. Located about 3 km from the temple town of Guruvayur, it is home to more than 50 elephants. These majestic creatures are trained and cared for in this historic fort-like setting, offering a unique experience for visitors.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>October to March</p>
+    </div>
+    <div class="card">
+      <h4>Visiting Hours</h4>
+      <p>9:00 AM – 5:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>₹10 (Adults), ₹5 (Children)</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      The property was once the palace of a local ruler and has since been converted into an elephant sanctuary. It is one of the very few places in the world where visitors can observe temple elephants up close. These elephants play a vital role in temple rituals and festivals, especially at Guruvayur Temple. Photography is restricted in certain areas.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Guruvayur Railway Station (3 km)</li>
+      <li><strong>Nearest Airport:</strong> Cochin International Airport (80 km)</li>
+      <li><strong>Nearby Attractions:</strong> Guruvayur Temple, Mammiyoor Temple, Chavakkad Beach</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="punnathur-kotta.jpg" alt="Punnathur Kotta Image">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.926021553241!2d76.03902807467237!3d10.60038798952502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ee14939be3fb%3A0x3be6224c398f1a06!2sPunnathur%20Kotta%20(elephant%20sanctuary)!5e0!3m2!1sen!2sin!4v1713139000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const images = ["punnathur-kotta.jpg", "elephants-1.jpg", "guruvayur-temple.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: none; /* Add this temporarily to test */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    color: cyan;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px; /* Curved on all corners */
+    outline: none;
+    width: 200px;
+    background: cyan;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Hero Section */
+.main::before {
+    content: '';
+    display: none;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url('FINAL.jpg') center/cover no-repeat;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.content .par {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+.cn {
+    background: cyan;
+    color: black;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 1s forwards;
+}
+
+.cn:hover {
+    background: white;
+    color: black;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul li {
+        margin: 10px 0;
+    }
+    .content h1 {
+        font-size: 40px;
+    }
+}

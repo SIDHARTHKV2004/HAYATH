@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phantom Rock | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="Phantom Rock.jpg" alt="Phantom Rock">
+    <div class="hero-text">
+      <h2>Phantom Rock</h2>
+      <p>Wayanad, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Phantom Rock is a unique archaeological site in Wayanad, named for its skull-shaped appearance that resembles a phantom. Perched at an elevation of 2,600 feet above sea level, it’s a popular trekking and photography spot, offering panoramic views of the surrounding hills and forests.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>October to March</p>
+    </div>
+    <div class="card">
+      <h4>Entry Timings</h4>
+      <p>6:00 AM – 6:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>Free</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      This natural rock formation is located near Ambalavayal in Wayanad and is surrounded by lush greenery and ancient tribal areas. The trek to Phantom Rock is moderately easy and rewards visitors with awe-inspiring landscapes and a peaceful environment away from the hustle and bustle.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Kozhikode Railway Station (90 km)</li>
+      <li><strong>Nearest Airport:</strong> Calicut International Airport (100 km)</li>
+      <li><strong>Nearby Attractions:</strong> Edakkal Caves, Karapuzha Dam, Cheengeri Hills</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="phantomrock.jpg" alt="Phantom Rock">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.3173311947427!2d76.25850547466718!3d11.6559707885708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5c23d487226df%3A0x74e1e6bc4de1aa58!2sPhantom%20Rock!5e0!3m2!1sen!2sin!4v1713120000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const images = ["phantomrock.jpg", "phantomrock2.jpg", "phantomrock3.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

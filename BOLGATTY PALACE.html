@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bolgatty Palace | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Kerala Travel Guide</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="Bolghatty palace.jpg" alt="Bolgatty Palace">
+    <div class="hero-text">
+      <h2>Bolgatty Palace</h2>
+      <p>Ernakulam, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Bolgatty Palace is a historic Dutch palace located on Bolgatty Island in Kochi, Ernakulam district. Built in 1744 by Dutch traders, it is one of the oldest existing Dutch palaces outside Holland. Now converted into a heritage hotel, the palace combines colonial architecture with modern amenities, making it a luxurious getaway.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>October to March</p>
+    </div>
+    <div class="card">
+      <h4>Visiting Hours</h4>
+      <p>9:30 AM – 5:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>₹20 for Adults, ₹10 for Children</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      Originally built as a mansion by the Dutch, Bolgatty Palace was later taken over by the British and served as the residence of the British governors. The building is surrounded by gardens, backwaters, and a golf course, offering a regal experience. Today, it operates under the Kerala Tourism Development Corporation (KTDC) as a premium heritage resort.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Ernakulam Junction (5 km)</li>
+      <li><strong>Nearest Airport:</strong> Cochin International Airport (35 km)</li>
+      <li><strong>Nearby Attractions:</strong> Marine Drive, Fort Kochi, Mattancherry Palace</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="bolgatty-palace.jpg" alt="Bolgatty Palace Image">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.289269364008!2d76.27819307467362!3d9.987474073581186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08739edbdf6f17%3A0xc36c8e3c20a00eae!2sBolgatty%20Palace%20and%20Island%20Resort!5e0!3m2!1sen!2sin!4v1713148800000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const images = ["bolgatty-palace.jpg", "bolgatty-garden.jpg", "bolgatty-view.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

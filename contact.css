@@ -1,0 +1,216 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Body & Background */
+  body {
+    background: url('FINAL.jpg');
+    color: white;
+    overflow-x: hidden;
+    height: 100vh; /* Ensure full height */
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu ul li {
+    margin-left: 20px;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: cyan;
+  }
+  
+  /* Hero Section */
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-text h1 {
+    font-size: 50px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 30px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.3);
+    color: cyan;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contact-form h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input,
+  form textarea {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+  
+  form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  form button {
+    background: cyan;
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: white;
+    color: black;
+  }
+  /* Contact Form Styling */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background: cyan;
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+  
+  /* Address Section */
+  .address {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .address h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  /* Map */
+  .map-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .map-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

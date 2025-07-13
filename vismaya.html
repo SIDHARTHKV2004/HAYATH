@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vismaya Water Park | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css".css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="VISMAYA.jpg" alt="Vismaya Water Park">
+    <div class="hero-text">
+      <h2>Vismaya Water Park</h2>
+      <p>Kannur, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Vismaya Water Park, located near Parassinikadavu in Kannur, is a fun-filled amusement destination perfect for families and thrill-seekers. With water rides, pools, and entertainment for all ages, it’s a refreshing break from the ordinary.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>October to March</p>
+    </div>
+    <div class="card">
+      <h4>Park Timings</h4>
+      <p>11:00 AM – 6:00 PM (Closed on Mondays)</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>₹500 for adults, ₹400 for children</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>About & Travel Info</h3>
+    <p>
+      Operated by the Malabar Tourism Development Cooperative, Vismaya offers various water rides, rain dance, virtual reality games, and food courts. It's well-maintained and known for its cleanliness and family-friendly atmosphere.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Kannur Railway Station (20 km)</li>
+      <li><strong>Nearest Airport:</strong> Kannur International Airport (40 km)</li>
+      <li><strong>Nearby Attractions:</strong> Parassini Temple, Pazhassi Dam</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="vismaya.jpg" alt="Vismaya Park Image">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.145328058324!2d75.42230657471316!3d11.991307888238716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba430424a024a5b%3A0xa47c4d58e4e6a181!2sVismaya%20Water%20Park!5e0!3m2!1sen!2sin!4v1713024900000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const images = ["vismaya.jpg", "vismaya2.jpg", "vismaya3.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

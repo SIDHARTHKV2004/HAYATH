@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parassini Temple | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="MUTHAPPAN.jpg" alt="Parassini Temple">
+    <div class="hero-text">
+      <h2>Parassini Temple</h2>
+      <p>Kannur, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Parassini Madappura Sree Muthappan Temple is a renowned religious and cultural landmark in Kannur. Dedicated to Lord Muthappan, this temple uniquely blends Hindu traditions with folk beliefs and welcomes people of all castes and religions.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>November to March</p>
+    </div>
+    <div class="card">
+      <h4>Temple Timings</h4>
+      <p>5:00 AM – 8:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>Free</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      The temple is famous for its daily Theyyam performances, rituals, and free meals (prasadam) for devotees. Located on the banks of the Valapattanam River, Parassini offers spiritual calm and scenic views. The temple's origins are linked with local myths and oral traditions.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Kannur Railway Station (20 km)</li>
+      <li><strong>Nearest Airport:</strong> Kannur International Airport (45 km)</li>
+      <li><strong>Nearby Attractions:</strong> Vismaya Water Park, Pazhassi Dam</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="parassini.jpg" alt="Parassini Temple Image">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.119681792447!2d75.42241307471323!3d11.993034788236039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4304a25ed6305%3A0xd0d4b6f59894c372!2sParassinikadavu%20Muthappan%20Temple!5e0!3m2!1sen!2sin!4v1713023120000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const images = ["parassini.jpg", "parassini2.jpg", "parassini3.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

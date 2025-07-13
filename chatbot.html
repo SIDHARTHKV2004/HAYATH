@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kerala Travel Bot</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    .chatbox {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .user, .bot {
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+    }
+
+    .user {
+      background: #00bcd4;
+      align-self: flex-end;
+    }
+
+    .bot {
+      background: #37474f;
+      align-self: flex-start;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input {
+      width: 70%;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      width: 25%;
+      background: cyan;
+      border: none;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chatbox">
+  <div class="messages" id="chat"></div>
+  <input type="text" id="userInput" placeholder="Ask about Madhur or Bekal...">
+  <button onclick="getBotResponse()">Send</button>
+</div>
+
+<script>
+  const knowledgeBase = {
+    "madhur": {
+      "location": "Madhur Temple is located in Kasaragod, Kerala.",
+      "history": "The temple is known for its gajaprishta style and an idol of Lord Ganesha believed to be growing in size.",
+      "timings": "5:00 AM – 12:30 PM, 5:00 PM – 8:00 PM",
+      "entry fee": "There is no entry fee.",
+      "nearby": "Nearby places include Malik Deenar Mosque and Bekal Fort.",
+      "best time": "October to April is the best time to visit."
+    },
+    "bekal": {
+      "location": "Bekal Fort is located in Kasaragod, Kerala, by the Arabian Sea.",
+      "history": "Bekal Fort was built in the 17th century and is one of the largest forts in Kerala.",
+      "entry fee": "Indian citizens pay ₹25, foreigners pay ₹300.",
+      "timings": "Open from 8:00 AM to 5:30 PM.",
+      "features": "It has scenic views, a beach, and a historic observation tower.",
+      "nearby": "Nearby places include Madhur Temple and Kappil Beach."
+    }
+  };
+
+  function getBotResponse() {
+    const userInput = document.getElementById("userInput").value.toLowerCase();
+    const chat = document.getElementById("chat");
+
+    const userMessage = document.createElement("div");
+    userMessage.classList.add("user");
+    userMessage.innerText = userInput;
+    chat.appendChild(userMessage);
+
+    let response = "Sorry, I don't have information on that.";
+
+    if (userInput.includes("madhur")) {
+      response = getRelevantInfo(userInput, knowledgeBase.madhur);
+    } else if (userInput.includes("bekal")) {
+      response = getRelevantInfo(userInput, knowledgeBase.bekal);
+    }
+
+    const botMessage = document.createElement("div");
+    botMessage.classList.add("bot");
+    botMessage.innerText = response;
+    chat.appendChild(botMessage);
+
+    document.getElementById("userInput").value = "";
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  function getRelevantInfo(question, info) {
+    if (question.includes("location")) return info.location;
+    if (question.includes("history")) return info.history;
+    if (question.includes("timings")) return info.timings;
+    if (question.includes("entry")) return info["entry fee"];
+    if (question.includes("nearby")) return info.nearby;
+    if (question.includes("best time")) return info["best time"];
+    if (question.includes("features") || question.includes("special")) return info.features || "It's a beautiful place.";
+    return "It's a lovely destination. Let me know what exactly you want to know!";
+  }
+</script>
+
+</body>
+</html>

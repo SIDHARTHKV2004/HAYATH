@@ -1,0 +1,179 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Gradient background */
+    color: white;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+/* HEADER */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: cyan;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* OVERVIEW SECTION */
+.overview {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.overview h3 {
+    color: cyan;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    line-height: 1.8;
+}
+
+/* HIGHLIGHTS SECTION */
+.highlights {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.card h4 {
+    color: cyan;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: white;
+}
+
+/* DETAILS SECTION */
+.details {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.details h3 {
+    color: cyan;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.details p {
+    line-height: 1.8;
+}
+
+.details ul {
+    margin-top: 20px;
+}
+
+.details li {
+    margin-bottom: 10px;
+}
+
+/* MAP SECTION */
+.map {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 40px;
+    font-size: 1rem;
+    color: white;
+}

@@ -1,0 +1,10 @@
+Array
+(
+    [from] => Thrissur
+    [to] => Kochi
+    [date] => 2025-05-12
+    [time] => 12:12
+    [vehicle] => train
+    [seating] => business
+    [fare] => 600
+)

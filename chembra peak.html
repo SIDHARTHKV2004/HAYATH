@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chembra Peak | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="Chembra Peak.jpg" alt="Chembra Peak">
+    <div class="hero-text">
+      <h2>Chembra Peak</h2>
+      <p>Wayanad, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Chembra Peak, the highest point in Wayanad, offers a breathtaking trekking experience through lush green forests and grasslands. Known for the heart-shaped lake en route, this spot is perfect for adventure lovers and nature seekers.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>September to March</p>
+    </div>
+    <div class="card">
+      <h4>Timings</h4>
+      <p>7:00 AM – 4:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>₹750 for group of 10 (trekking permit)</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      Chembra Peak stands at an elevation of 2,100 meters and is a popular trekking destination in the Western Ghats. The trek is moderately challenging and leads to the famous heart-shaped lake, which is believed to never dry up. Permission from the forest office is required before trekking.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Kozhikode Railway Station (about 79 km)</li>
+      <li><strong>Nearest Airport:</strong> Calicut International Airport (about 92 km)</li>
+      <li><strong>Nearby Attractions:</strong> Soochipara Falls, Pookode Lake, Edakkal Caves</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="chembra.jpg" alt="Chembra Peak">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.209555173693!2d76.10141517464008!3d11.52747148900932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5d7669b8c5dd9%3A0x9e16a63e24e918d2!2sChembra%20Peak!5e0!3m2!1sen!2sin!4v1713112345678"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const images = ["chembra.jpg", "chembra_lake.jpg", "chembra_trek.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wayanad Wildlife Sanctuary | Kerala Travel</title>
+  <link rel="stylesheet" href="bekal.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>HAYATH TRAVEL HUB</h1>
+    <nav>
+      <a href="MAIN PAGE.html">Home</a>
+      <a href="DISTRICTS.html">Destinations</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="Wayanad Wildlife Sanctuary.jpg" alt="Wayanad Wildlife Sanctuary">
+    <div class="hero-text">
+      <h2>Wayanad Wildlife Sanctuary</h2>
+      <p>Wayanad, Kerala</p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="overview">
+    <h3>Overview</h3>
+    <p>
+      Wayanad Wildlife Sanctuary, nestled in the Western Ghats, is Kerala's second-largest wildlife sanctuary. It forms a part of the Nilgiri Biosphere Reserve and is home to elephants, tigers, leopards, and rare bird species, making it a haven for wildlife enthusiasts and nature lovers.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="card">
+      <h4>Best Time to Visit</h4>
+      <p>October to May</p>
+    </div>
+    <div class="card">
+      <h4>Timings</h4>
+      <p>7:00 AM – 10:00 AM, 3:00 PM – 5:00 PM</p>
+    </div>
+    <div class="card">
+      <h4>Entry Fee</h4>
+      <p>₹20 (Indian nationals), ₹110 (foreigners) + extra for vehicle and camera</p>
+    </div>
+  </section>
+
+  <!-- HISTORY & TRAVEL INFO -->
+  <section class="details">
+    <h3>History & Travel Info</h3>
+    <p>
+      Established in 1973, the sanctuary covers an area of over 340 sq. km and is divided into four ranges: Sulthan Bathery, Muthanga, Kurichiat, and Tholpetty. It offers guided safari tours, making it an ideal destination to spot wild elephants and learn about the rich flora and fauna of the region.
+    </p>
+    <ul>
+      <li><strong>Nearest Railway:</strong> Kozhikode Railway Station (around 100 km)</li>
+      <li><strong>Nearest Airport:</strong> Calicut International Airport (about 120 km)</li>
+      <li><strong>Nearby Attractions:</strong> Edakkal Caves, Tholpetty Forest, Kuruva Island</li>
+    </ul>
+  </section>
+
+  <!-- IMAGE SLIDESHOW -->
+  <div class="manual-slider">
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <img id="sliderImage" src="wayanadwildlife.jpg" alt="Wayanad Wildlife Sanctuary">
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Location</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.4704354720577!2d76.25541957467298!3d11.653360888580906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6062b0bd91e0b%3A0x16fdd5f85a46f8f6!2sWayanad%20Wildlife%20Sanctuary!5e0!3m2!1sen!2sin!4v1713115555555"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kerala Travel. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDESHOW SCRIPT -->
+  <script>
+    const images = ["wayanadwildlife.jpg", "muthanga_range.jpg", "wildlife_safari.jpg"];
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      document.getElementById("sliderImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>
